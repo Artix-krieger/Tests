@@ -1,19 +1,18 @@
 //  Write a Java program to calculate the average of a list of numbers using a do-while loop.
- public static double calculateAverage(List<Integer> nums) {
+ public static double calculateAverage(int[] nums) {
         int sum = 0;
-        for (int num : nums) {
-            sum += num;
-        }
-        return (double) sum / nums.size();
+        int i = 0;
+
+        do {
+            sum += nums[i];
+            i++;
+        } while (i < nums.length);
+
+        return (double) sum / nums.length;
     }
 
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>();
-        nums.add(10);
-        nums.add(20);
-        nums.add(30);
-        nums.add(50);
-        nums.add(90);
+        int[] nums = {10,20,30,40,50};
 
         double avg = calculateAverage(nums);
         System.out.println(avg);
