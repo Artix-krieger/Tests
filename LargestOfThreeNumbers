@@ -1,0 +1,19 @@
+// Write a Java program to find the largest of three numbers using nested if-else statements.
+    public static void largest(int a, int b, int c) {
+        if (a > b) {
+            if (a > c) {
+                System.out.println(a + " is bigger");
+            }
+        } else if (b > c) {
+            System.out.println(b + " is bigger");
+        } else {
+            System.out.println(c + " is bigger");
+        }
+    }
+
+    public static void main(String[] args) {
+        int n1 = 10;
+        int n2 = 20;
+        int n3 = 30;
+        largest(n1, n2, n3);
+    }
