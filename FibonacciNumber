@@ -1,0 +1,21 @@
+//  Write a Java program to print the Fibonacci series up to a given number using a for loop.
+public static void printFibonacci(int n) {
+        int firstTerm = 0, secondTerm = 1;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(firstTerm+" ");
+            int nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int n1 = 5;
+        int n2 = 10;
+
+        printFibonacci(n1);
+        printFibonacci(n2);
+        
+    }
